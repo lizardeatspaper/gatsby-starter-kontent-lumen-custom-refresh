@@ -5,6 +5,7 @@
   "repository": "git+https://github.com/kentico/gatsby-starter-kontent-lumen",
   "author": "Martin Makarsky <martinmakarsky@gmail.com> (https://github.com/makma)",
   "license": "MIT",
+  "type": "module",
   "private": false,
   "scripts": {
     "prepare-environment": "node scripts/ncp.js .env.template .env -u",
