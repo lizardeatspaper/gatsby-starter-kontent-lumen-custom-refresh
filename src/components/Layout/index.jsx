@@ -67,7 +67,7 @@ const Layout = ({ children }) => {
           </Helmet>
           {rebuildInProgress && (
             <div style={{
-              background: 'red', color: 'white', fontSize: '13px', padding: '10px', position: 'fixed', top: '0', left: '0', width: '100%',
+              background: 'red', color: 'white', zIndex: 9999, fontSize: '13px', padding: '10px', position: 'fixed', top: '0', left: '0', width: '100%',
             }}
             >
               Netlify application is rebuilding. Preview will refresh when rebuild is ready.
