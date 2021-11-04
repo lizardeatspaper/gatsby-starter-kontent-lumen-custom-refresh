@@ -70,7 +70,7 @@ const Layout = ({ children }) => {
               background: 'red', color: 'white', fontSize: '13px', padding: '10px', position: 'fixed', top: '0', left: '0', width: '100%',
             }}
             >
-              Netlify rebuild in progress
+              Netlify application is rebuilding. Preview will refresh when rebuild is ready.
             </div>
           )}
           {children}
