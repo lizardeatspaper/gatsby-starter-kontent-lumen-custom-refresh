@@ -1,6 +1,7 @@
+import fetch from 'node-fetch';
+
 const siteId = process.env.NETLIFY_SITE_ID
 const token = process.env.NETLIFY_TOKEN
-const fetch = require('node-fetch')
 
 const handler = async event => {
   try {
