@@ -12,7 +12,7 @@
     "build": "gatsby build",
     "build:netlify": "cross-env GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --log-pages",
     "clean": "gatsby clean",
-    "lint": "./node_modules/.bin/eslint --cache --ext .js,.jsx --ignore-pattern public .",
+    "lint": "./node_modules/.bin/eslint --cache --ext .js,.jsx --ignore-pattern public --fix .",
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier --write ./*.js src/**/*.{js,jsx}",
     "deploy": "gatsby build --prefix-paths && gh-pages -d public"
@@ -28,7 +28,8 @@
   "dependencies": {
     "@kentico/gatsby-kontent-components": "^6.0.0",
     "@kentico/gatsby-source-kontent": "^7.2.0",
-    "@kentico/kontent-smart-link": "^2.1.0",
+    "@kentico/kontent-smart-link": "^2.2.0-alpha.1",
+    "node-fetch": "^3.0.0",
     "react": "^16.8.0",
     "react-dom": "^16.8.0",
     "react-helmet": "^5.2.0"

@@ -11,17 +11,17 @@ class Article extends React.Component {
     const categories = _.get(
       this.props,
       'data.elements.category.value',
-      []
+      [],
     )
     const description = _.get(
       this.props,
       'data.elements.description.value',
-      'N/A'
+      'N/A',
     )
     const slug = `/articles/${_.get(
       this.props,
       'data.elements.slug.value',
-      'N/A'
+      'N/A',
     )}`
     const itemId = _.get(this.props, 'data.system.id')
 
@@ -36,28 +36,26 @@ class Article extends React.Component {
             {moment(date).format('MMMM YYYY')}
           </time>
           <span className="article__meta-divider" />
-          <span 
-             data-kontent-element-codename="category"
-             data-kontent-add-button
-             data-kontent-add-button-insert-position="end"
-             data-kontent-add-button-render-position="right-end"
-            >
-          {categories.map(category => {
-            return (
+          <span
+            data-kontent-element-codename="category"
+            data-kontent-add-button
+            data-kontent-add-button-insert-position="end"
+            data-kontent-add-button-render-position="right-end"
+          >
+            {categories.map(category => (
               <span
-              className="article__meta-category"
-              key={category.elements.slug.value}
-              data-kontent-element-codename="category"
-            >
-              <Link
-                to={`/categories/${category.elements.slug.value}/`}
-                className="article__meta-category-link"
+                className="article__meta-category"
+                key={category.elements.slug.value}
+                data-kontent-element-codename="category"
               >
-                {category.elements.title.value  + " "}
-              </Link>
-            </span>
-            )
-          })}
+                <Link
+                  to={`/categories/${category.elements.slug.value}/`}
+                  className="article__meta-category-link"
+                >
+                  {`${category.elements.title.value} `}
+                </Link>
+              </span>
+            ))}
           </span>
 
         </div>

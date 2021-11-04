@@ -7,8 +7,7 @@ import { RichTextElement } from '@kentico/gatsby-kontent-components'
 class ArticleTemplateDetails extends React.Component {
   render() {
     const articleTemplateData = this.props
-    const subtitle =
-      articleTemplateData.data.kontentItemSiteMetadata.elements.subtitle.value
+    const subtitle = articleTemplateData.data.kontentItemSiteMetadata.elements.subtitle.value
     const author = articleTemplateData.data.kontentItemAuthor
     const article = this.props.data.kontentItemArticle.elements
     const articleId = this.props.data.kontentItemArticle.system.id
@@ -27,8 +26,8 @@ class ArticleTemplateDetails extends React.Component {
         <ul
           className="article-single__tags-list"
         >
-          {tags &&
-            tags.map((tag) => (
+          {tags
+            && tags.map(tag => (
               <li
                 className="article-single__tags-list-item"
                 key={tag.system.codename}
@@ -69,7 +68,10 @@ class ArticleTemplateDetails extends React.Component {
             className="article-single__date"
             data-kontent-element-codename="date"
           >
-            <em>Published {moment(article.date.value).format('D MMM YYYY')}</em>
+            <em>
+              Published
+              {moment(article.date.value).format('D MMM YYYY')}
+            </em>
           </div>
           <div className="article-single__footer">
             {tagsBlock}
@@ -81,7 +83,11 @@ class ArticleTemplateDetails extends React.Component {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <br /> <strong>{author.elements.name.value}</strong> on Twitter
+                <br />
+                {' '}
+                <strong>{author.elements.name.value}</strong>
+                {' '}
+                on Twitter
               </a>
             </p>
           </div>

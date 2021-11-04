@@ -8,8 +8,7 @@ import CategoryTemplateDetails from '../components/CategoryTemplateDetails'
 class CategoryTemplate extends React.Component {
   render() {
     const categoryTemplateData = this.props
-    const siteTitle =
-      categoryTemplateData.data.kontentItemSiteMetadata.elements.title.value
+    const siteTitle = categoryTemplateData.data.kontentItemSiteMetadata.elements.title.value
     const categoryTitle = categoryTemplateData.pageContext.categoryTitle
 
     return (
